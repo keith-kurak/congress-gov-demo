@@ -1,3 +1,20 @@
+# Congress.gov API demo
+Reads data about bills and other activity happening in the United States House of Representatives and Senate from [Congress.gov's API](https://gpo.congress.gov/). Deployable as a mobile app via EAS Build or web site via EAS Hosting.
+
+## How to run
+1. `bun install`
+2. `eas init` to setup EAS project
+3. Grab an API key from [Congress.gov](https://gpo.congress.gov/).
+4. On [expo.dev](https://expo.dev), set a project environment variable (in prod, preview, dev) called `CONGRESS_API_KEY`; set it to the key you just got.
+5. Run `eas env:pull` to pull the environment (with the API key) down to your local machine.
+6. Run `npx expo start`
+
+## How to deploy to web
+1. Run `npx expo export --platform web`
+2. Run `eas deploy --prod --environment production`
+
+-----
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
